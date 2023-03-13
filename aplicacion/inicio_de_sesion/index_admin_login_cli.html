@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO</title>
+</head>
+<body>
+    <h1>BIENVENIDO</h1>
+    <h4>COMO DESEA INGRESAR</h4>
+
+    <div class="container"> 
+      <a href="../admin/login_admin.html">Ingreso del administrador</a>  
+      <p>Inicio de Sesi&oacute;n Cliente</p>  
+    
+       <form action="../inicio_de_sesion/login.php" method="post">
+        
+        <input type="text" placeholder="Ingrese su Usuario" name="usuario" required>
+        <input id="inputpass" type="password" placeholder="Ingrese su Clave" name="clave" required>
+        <input type="checkbox" onclick="mostrarpass()">Mostrar Contraseña<br>
+        <input type="submit" name="iniciocli" value="ENTRAR">
+        <a href="../registro_clientes/registro_cli.html"><input type="button" value="REGISTRESE"></a>
+       </form> 
+    </div>
+    <script>
+        
+        function mostrarpass(){
+            var x = document.getElementById("inputpass");
+            if(x.type==="password"){
+                x.type="text";
+            } else{
+                x.type="password";
+            }
+        };
+            </script>
+        
+    </body>
+</html>

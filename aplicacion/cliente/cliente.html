@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+</head>
+<body>
+    <h1>FORMULARIO PQSF</h1>
+    <h4>Peticiones,Quejas,Solicitudes,Felicitaciones</h4>
+    <form name="form" action="cli_registrar_pqsf.php" method="post"><p>
+        Nombre: <input type="text" name="nombre" required><p>
+        Apellido: <input type="text" name="apellido" required><p>
+           <label for="Ciudad">Ciudad: </label> 
+        <select name="Ciudad" required>
+        <option value="">Seleccione</option>   
+        <option value="Fonseca">Fonseca</option>
+        <option value="Barranquilla">Barranquilla</option>
+        <option value="Cartagena">Cartagena</option>
+        <option value="Manizales">Manizales</option>
+        <option value="Valledupar">Valledupar</option>
+        <option value="Bucaramanga">Bucaramanga</option>
+        <option value="Cali">Cali</option>
+        <option value="Tunja">Tunja</option>
+        <option value="Bogot&aacute;">Bogot&aacute;</option>
+        <option value="Medell&iacute;n">Medell&iacute;n</option>
+        </select><p> 
+        Estado: <input type="text" name="estado" value="Pendiente" readonly required><p>
+        Correo: <input type="email" name="correo" required><p>
+        Tel&eacute;fono: <input type="text" name="telefono" required><p>
+            <label for="Tipo">Tipo: </label> 
+        <select name="Tipo" required>
+        <option value="">Seleccione</option>   
+        <option value="PETICION">PETICION</option>
+        <option value="QUEJA">QUEJA</option>
+        <option value="SOLICITUD">SOLICITUD</option>
+        <option value="FELICITACI&Oacute;N">FELICITACI&Oacute;N</option>
+        </select><p>  
+        <textarea name="asunto" rows="4" cols="50" placeholder="Asunto:" required></textarea><p>
+        <textarea name="descripcion" rows="20" cols="100" placeholder="Descripci&oacute;n:" required></textarea><p>
+        Fecha y Hora: <input type="datetime-local" name="fecha y hora" required><p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+    </form>
+    
+    <section>
+        <form  action="cli_consultar_id_pqsf.php" method="get">
+        <input type="text" name="nombre" placeholder="Ingrese su Nombre" required>
+        <input type="submit" value="CONSULTAR ID DE PQSF">
+        </form>
+    </section>
+
+    <section>
+    <form  action="clientefiltro.php" method="get">
+    <input type="number" name="id_pqsf" placeholder="Ingresar ID de pqsf" required>
+    <input type="submit" value="CONSULTAR RESPUESTA DE PQSF ENVIADA">
+    </form>
+    </section>
+
+   
+</body>
+</html>
+
+<!--Ciudad: <input type="text" name="ciudad" required></p>
+<!Tipo: <input type="text" name="tipo" required><p>
